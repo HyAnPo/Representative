@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Search View Controller-->
@@ -16,14 +17,75 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iMg-Zu-Y9c">
+                                <rect key="frame" x="0.0" y="64" width="600" height="216"/>
+                                <animations/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="otl-f1-DMK"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="t3e-A4-csv"/>
+                                </connections>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fy4-b3-e4U">
+                                <rect key="frame" x="276" y="397" width="48" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Search"/>
+                                <connections>
+                                    <action selector="searchButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="znu-ce-8lL"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="fy4-b3-e4U" firstAttribute="centerX" secondItem="iMg-Zu-Y9c" secondAttribute="centerX" id="H6O-WG-rwr"/>
+                            <constraint firstItem="iMg-Zu-Y9c" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="K5i-02-w9z"/>
+                            <constraint firstItem="iMg-Zu-Y9c" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="SYF-Ge-zPH"/>
+                            <constraint firstItem="iMg-Zu-Y9c" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="mCj-Af-KMS"/>
+                            <constraint firstItem="fy4-b3-e4U" firstAttribute="top" secondItem="iMg-Zu-Y9c" secondAttribute="bottom" constant="117" id="nVv-Xt-ZJv"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="iMg-Zu-Y9c" secondAttribute="trailing" constant="-20" id="u3Y-pz-YZf"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="io0-WD-Yzy"/>
+                    <connections>
+                        <outlet property="pickerView" destination="iMg-Zu-Y9c" id="VX5-Cl-zDc"/>
+                        <segue destination="goX-nW-bap" kind="show" identifier="searchComplete" id="ZDo-uJ-adJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1212" y="1197"/>
+        </scene>
+        <!--Results Table View Controller-->
+        <scene sceneID="W2n-ox-h4y">
+            <objects>
+                <tableViewController id="goX-nW-bap" customClass="ResultsTableViewController" customModule="Representatives" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="a0d-YB-2jT">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="2EW-oe-slg">
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2EW-oe-slg" id="R8H-EU-iqe">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <animations/>
+                                </tableViewCellContentView>
+                                <animations/>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="goX-nW-bap" id="DLG-jt-k5Y"/>
+                            <outlet property="delegate" destination="goX-nW-bap" id="aSm-ga-UeH"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="H3E-eU-zux" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1870" y="1197"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="cze-jk-7LR">
