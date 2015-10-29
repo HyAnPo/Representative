@@ -10,7 +10,7 @@ import Foundation
 
 class NetworkController: NSObject {
     
-    static let baseURLString = "https://whoismyrepresentative.com"
+    static let baseURLString = "http://whoismyrepresentative.com"
     
     static func searchURLByState(state : String) -> NSURL {
     
