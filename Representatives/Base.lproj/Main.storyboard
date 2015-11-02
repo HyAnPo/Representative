@@ -38,7 +38,6 @@
                                 <state key="normal" title="Search Representatives"/>
                                 <connections>
                                     <action selector="searchButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LcA-g5-ify"/>
-                                    <segue destination="yBX-kA-Fxc" kind="show" id="89t-So-YxK"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -61,10 +60,10 @@
             </objects>
             <point key="canvasLocation" x="1212" y="1197"/>
         </scene>
-        <!--View Controller-->
+        <!--Results Table View Controller-->
         <scene sceneID="faj-cw-49O">
             <objects>
-                <viewController id="yBX-kA-Fxc" sceneMemberID="viewController">
+                <viewController id="yBX-kA-Fxc" customClass="ResultsTableViewController" customModule="Representatives" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="0gV-tb-HyO"/>
                         <viewControllerLayoutGuide type="bottom" id="dvA-k0-RIu"/>
@@ -75,6 +74,9 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="showResultsSegue" id="Elk-2p-rua"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4YN-PM-4nk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -100,4 +102,7 @@
             <point key="canvasLocation" x="524" y="1197"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Elk-2p-rua"/>
+    </inferredMetricsTieBreakers>
 </document>

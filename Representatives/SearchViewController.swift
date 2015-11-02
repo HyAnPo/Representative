@@ -10,8 +10,16 @@ import UIKit
 
 class SearchViewController: UIViewController, UIPickerViewDataSource {
     
+    var stateReps: [Representative] = []
+    
     @IBOutlet weak var pickerView: UIPickerView!
     @IBAction func searchButtonTapped(sender: UIButton) {
+        // Create an index from the pickerview
+        let index = self.pickerView.selectedRowInComponent(0)
+        
+        // Get the value from the array of states with the index of the selected row
+        let stateString = self.states[index]
+        
     }
     
     
