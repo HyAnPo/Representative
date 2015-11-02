@@ -15,7 +15,7 @@
 		01AD26201BE171D9009BF4D2 /* RepresentativesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01AD261F1BE171D9009BF4D2 /* RepresentativesUITests.swift */; };
 		01AD262E1BE17215009BF4D2 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01AD262D1BE17215009BF4D2 /* SearchViewController.swift */; };
 		82641C831BE6BFFC007632EA /* RepresentativeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82641C821BE6BFFC007632EA /* RepresentativeTableViewController.swift */; };
-		82641C851BE6C6C5007632EA /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82641C841BE6C6C5007632EA /* File.swift */; };
+		82641C851BE6C6C5007632EA /* Representative.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82641C841BE6C6C5007632EA /* Representative.swift */; };
 		82641C871BE6CA79007632EA /* NetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82641C861BE6CA79007632EA /* NetworkController.swift */; };
 /* End PBXBuildFile section */
 
@@ -51,7 +51,7 @@
 		01AD26211BE171D9009BF4D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		01AD262D1BE17215009BF4D2 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		82641C821BE6BFFC007632EA /* RepresentativeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepresentativeTableViewController.swift; sourceTree = "<group>"; };
-		82641C841BE6C6C5007632EA /* File.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
+		82641C841BE6C6C5007632EA /* Representative.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Representative.swift; sourceTree = "<group>"; };
 		82641C861BE6CA79007632EA /* NetworkController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -105,7 +105,7 @@
 			children = (
 				01AD25FF1BE171D9009BF4D2 /* AppDelegate.swift */,
 				01AD262D1BE17215009BF4D2 /* SearchViewController.swift */,
-				82641C841BE6C6C5007632EA /* File.swift */,
+				82641C841BE6C6C5007632EA /* Representative.swift */,
 				82641C861BE6CA79007632EA /* NetworkController.swift */,
 				01AD26031BE171D9009BF4D2 /* Main.storyboard */,
 				82641C821BE6BFFC007632EA /* RepresentativeTableViewController.swift */,
@@ -267,7 +267,7 @@
 			files = (
 				82641C871BE6CA79007632EA /* NetworkController.swift in Sources */,
 				01AD262E1BE17215009BF4D2 /* SearchViewController.swift in Sources */,
-				82641C851BE6C6C5007632EA /* File.swift in Sources */,
+				82641C851BE6C6C5007632EA /* Representative.swift in Sources */,
 				01AD26001BE171D9009BF4D2 /* AppDelegate.swift in Sources */,
 				82641C831BE6BFFC007632EA /* RepresentativeTableViewController.swift in Sources */,
 			);
