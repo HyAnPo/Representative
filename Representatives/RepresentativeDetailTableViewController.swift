@@ -1,5 +1,5 @@
 //
-//  ResultsTableViewController.swift
+//  RepresentativeDetailTableViewController.swift
 //  Representatives
 //
 //  Created by Andrew Porter on 11/2/15.
@@ -8,47 +8,46 @@
 
 import UIKit
 
-class ResultsTableViewController: UITableViewController {
+class RepresentativeDetailTableViewController: UITableViewController {
     
-    var repsArray: [Representative] = []
+    var rep: Representative?
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        // Uncomment the following line to preserve selection between presentations
+        // self.clearsSelectionOnViewWillAppear = false
+
+        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
+        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+    }
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
     }
 
     // MARK: - Table view data source
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 1
+        return 0
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.repsArray.count
+        // #warning Incomplete implementation, return the number of rows
+        return 0
     }
 
-    
+    /*
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("representativeCell", forIndexPath: indexPath)
-        
-        let rep = self.repsArray[indexPath.row]
-        
-        if let name = rep.name, party = rep.party {
-            cell.textLabel?.text = name
-            cell.detailTextLabel?.text = party
-            if party == "I" {
-                cell.detailTextLabel?.textColor = UIColor.yellowColor()
-            } else if party == "D" {
-                cell.detailTextLabel?.textColor = UIColor.blueColor()
-            } else if party == "R" {
-                cell.detailTextLabel?.textColor = UIColor.redColor()
-            }
-        }
+        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
+
+        // Configure the cell...
 
         return cell
     }
-    
+    */
 
     /*
     // Override to support conditional editing of the table view.
